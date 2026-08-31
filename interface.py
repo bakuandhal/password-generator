@@ -24,7 +24,7 @@ def crear_interfaz():
         justify="center"
     )
 
-    entry_longitud.insert.BooleanVar(value=True)
+    entry_longitud.insert(0, "12")
     entry_longitud.pack(pady=8)
 
     var_mayusculas = tk.BooleanVar(value=True)
