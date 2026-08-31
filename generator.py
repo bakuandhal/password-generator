@@ -1,7 +1,40 @@
 import secrets
-import strings
+import string
 
 def generate_password (longitud, mayusculas, minusculas, numeros, simbolos):
     caracteres = ""
 
-    if mayusculas
+    if minusculas: 
+        caracteres += string.ascii_lowercase
+
+    if mayusculas:
+        caracteres += string.ascii_lowercase
+
+    if numeros:
+        caracteres += string.digits
+
+    if simbolos:
+        caracteres += string.punctuation
+
+    if not caracteres:
+        return "Selecciona al menos una opción"
+
+    contraseña = ""
+
+    for _ in range(longitud):
+        contraseña += secrets.choice(caracteres)
+
+    return contraseña
+
+
+resultado = generate_password(
+        12,
+        True,
+        True,
+        True,
+        True
+)
+
+print(resultado)
+
+
