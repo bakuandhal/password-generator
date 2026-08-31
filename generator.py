@@ -8,7 +8,7 @@ def generate_password (longitud, mayusculas, minusculas, numeros, simbolos):
         caracteres += string.ascii_lowercase
 
     if mayusculas:
-        caracteres += string.ascii_lowercase
+        caracteres += string.ascii_uppercase
 
     if numeros:
         caracteres += string.digits
