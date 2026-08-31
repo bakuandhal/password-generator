@@ -114,7 +114,7 @@ def crear_interfaz():
         ventana.update()
 
         messagebox.showinfo(
-            "Copiado"
+            "Copiado",
             "Contra copiada al portapapeles"
         )
 
@@ -127,7 +127,7 @@ def crear_interfaz():
     tk.Button(
         ventana,
         text="Copiar al portapapeles",
-        command=generar
+        command=copiar
     ).pack(pady=5)
 
     ventana.mainloop()
