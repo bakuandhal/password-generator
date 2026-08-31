@@ -19,12 +19,12 @@ def generate_password (longitud, mayusculas, minusculas, numeros, simbolos):
     if not caracteres:
         return "Selecciona al menos una opción"
 
-    contraseña = ""
+    password = ""
 
     for _ in range(longitud):
-        contraseña += secrets.choice(caracteres)
+        password += secrets.choice(caracteres)
 
-    return contraseña
+    return password
 
 
 resultado = generate_password(
