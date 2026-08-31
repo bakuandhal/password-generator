@@ -36,22 +36,41 @@ def crear_interfaz():
         ventana,
         text="Mayúsculas (A-Z)"
         variable=var_mayusculas
-    )
+    ).pack()
 
     tk.CheckButton(
         ventana,
         text="Minúsculas (a-z)"
         variable=var_minusculas
-    )
+    ).pack()
 
     tk.CheckButton(
         ventana,
         text="Números (0-9)"
         variable=var_numeros
-    )
+    ).pack()
 
     tk.CheckButton(
         ventana,
         text="Símbolos (!@#$...)"
-        variable=var_mayusculas
-    )
+        variable=var_simbolos
+    ).pack()
+
+    entry_resultado.pack(pady=15)
+
+    def generar():
+        try:
+            longitud=int(entry_longitud.get())
+
+            if longitud < 4:
+                messagebox.showwarning(
+                    "Error",
+                    "La longitud minima es 4."
+                )
+                return
+
+            password = generate_password(
+                longitud,
+                var_mayusculas.get(),
+                
+            )
